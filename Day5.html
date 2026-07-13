@@ -192,3 +192,50 @@ placeholder="Enter the name..."></textarea>
 </div>
 
   </div>
+
+  <script>
+
+function beginCase(){
+
+document.getElementById("briefing").style.display="none";
+document.getElementById("case").style.display="block";
+
+}
+
+function showHint(){
+
+document.getElementById("hint").style.display="block";
+
+}
+
+function submitAnswer(){
+
+let answer=document.getElementById("answer").value.trim().toLowerCase();
+
+if(
+answer==="kanna"
+){
+
+document.getElementById("result").innerHTML=
+"✅ Memory Confirmed!<br><br>The special name has been recovered.<br><br>Preparing Case File 006...";
+
+setTimeout(function(){
+
+window.location.href="day6.html";
+
+},3000);
+
+}
+else{
+
+document.getElementById("result").innerHTML=
+"❌ Evidence Inconclusive.<br>This wasn't the special name recorded in our memories.";
+
+}
+
+}
+
+</script>
+
+</body>
+</html>
