@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Case File 001</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,Helvetica,sans-serif;
+}
+
+body{
+background:#0b0b0b;
+color:white;
+}
+
+.container{
+width:90%;
+max-width:900px;
+margin:40px auto;
+}
+
+.card{
+background:#171717;
+padding:25px;
+border:1px solid gold;
+border-radius:12px;
+margin-bottom:25px;
+box-shadow:0 0 20px rgba(255,215,0,.15);
+}
+
+h1,h2{
+color:gold;
+}
+
+p{
+line-height:1.8;
+margin-top:10px;
+}
+
+button{
+margin-top:20px;
+padding:12px 24px;
+background:gold;
+color:black;
+border:none;
+border-radius:8px;
+cursor:pointer;
+font-weight:bold;
+font-size:16px;
+}
+
+button:hover{
+background:#ffd700;
+}
+
+textarea{
+width:100%;
+height:170px;
+margin-top:20px;
+padding:15px;
+border:none;
+border-radius:10px;
+font-size:16px;
+resize:none;
+}
+
+#briefing{
+display:block;
+}
+
+#case{
+display:none;
+}
+
+#hint{
+display:none;
+margin-top:20px;
+padding:15px;
+background:#222;
+border-left:5px solid gold;
+border-radius:8px;
+color:#90ee90;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="card" id="briefing">
+
+<h1>🔒 CONFIDENTIAL</h1>
+
+<p><b>Agency:</b> SHIN Investigation Bureau</p>
+
+<p><b>Classification:</b> TOP SECRET</p>
+
+<p><b>Case File:</b> 001</p>
+
+<p><b>Mission:</b></p>
+
+<p>
+Reconstruct the first chapter of a forgotten story.
+Only by remembering where everything began
+can the investigation continue.
+</p>
+
+<p><b>Detective:</b> Rashu</p>
+
+<p style="color:#ffcc00;">
+⚠ Every correct answer unlocks the next piece of evidence.
+</p>
+
+<button onclick="beginCase()">
+Begin Investigation
+</button>
+
+</div>
+
+<div class="card" id="case">
+
+<h1>📁 CASE FILE 001</h1>
+
+<h2>🔍 Evidence 001</h2>
+
+<p>
+
+"Every great mystery begins at a place that holds meaning,
+not value.
+
+Find where the first chapter of this story truly began.
+
+That place holds the key to tomorrow's clue."
+
+</p>
+
+<h2 style="margin-top:30px;">
+📝 Your Deduction
+</h2>
+
+<textarea
+placeholder="Write your answer here..."></textarea>
+
+<button onclick="showHint()">
+💡 Need a Hint?
+</button>
+
+<div id="hint">
+
+Think back to the day when an exam brought two strangers
+into a conversation.
+
+The paper wasn't the most important thing inside that room.
+
+</div>
+
+<button style="margin-left:15px;">
+📂 Submit Investigation
+</button>
+
+</div>
+
+</div>
+
+<script>
+
+function beginCase(){
+
+document.getElementById("briefing").style.display="none";
+
+document.getElementById("case").style.display="block";
+
+}
+
+function showHint(){
+
+document.getElementById("hint").style.display="block";
+
+}
+
+</script>
+
+</body>
+  </html>
