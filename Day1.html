@@ -148,7 +148,10 @@ That place holds the key to tomorrow's clue."
 </h2>
 
 <textarea
+id="answer"
 placeholder="Write your answer here..."></textarea>
+
+<p id="result" style="margin-top:20px;font-weight:bold;"></p>
 
 <button onclick="showHint()">
 💡 Need a Hint?
@@ -163,7 +166,7 @@ The paper wasn't the most important thing inside that room.
 
 </div>
 
-<button style="margin-left:15px;">
+<button style="margin-left:15px;" onclick="submitAnswer()">
 📂 Submit Investigation
 </button>
 
@@ -176,7 +179,6 @@ The paper wasn't the most important thing inside that room.
 function beginCase(){
 
 document.getElementById("briefing").style.display="none";
-
 document.getElementById("case").style.display="block";
 
 }
@@ -184,6 +186,35 @@ document.getElementById("case").style.display="block";
 function showHint(){
 
 document.getElementById("hint").style.display="block";
+
+}
+
+function submitAnswer(){
+
+let answer=document.getElementById("answer").value.toLowerCase();
+
+if(
+answer.includes("rdbms") ||
+answer.includes("lab")
+){
+
+document.getElementById("result").innerHTML=
+"✅ Excellent work, Detective! You have solved Case File 001.<br><br>The next case has been unlocked.";
+
+setTimeout(function(){
+
+window.location.href="day2.html";
+
+},3000);
+
+}
+
+else{
+
+document.getElementById("result").innerHTML=
+"❌ Evidence inconclusive.<br>Keep investigating.";
+
+}
 
 }
 
