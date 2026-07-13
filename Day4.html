@@ -200,3 +200,49 @@ placeholder="Enter the codename..."></textarea>
 </div>
 
   </div>
+<script>
+
+function beginCase(){
+
+document.getElementById("briefing").style.display="none";
+document.getElementById("case").style.display="block";
+
+}
+
+function showHint(){
+
+document.getElementById("hint").style.display="block";
+
+}
+
+function submitAnswer(){
+
+let answer=document.getElementById("answer").value.trim().toLowerCase();
+
+if(
+answer==="client"
+){
+
+document.getElementById("result").innerHTML=
+"✅ Codename Verified!<br><br>Identity Confirmed...<br>Access Granted.<br><br>Decrypting Case File 005...";
+
+setTimeout(function(){
+
+window.location.href="day5.html";
+
+},3000);
+
+}
+else{
+
+document.getElementById("result").innerHTML=
+"❌ Access Denied.<br>The codename doesn't match our mission records.";
+
+}
+
+}
+
+</script>
+
+</body>
+</html>
