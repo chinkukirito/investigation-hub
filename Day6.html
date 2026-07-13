@@ -172,3 +172,71 @@ Where is the final destination?
 </div>
 
   </div>
+
+  <script>
+
+function beginCase(){
+
+document.getElementById("briefing").style.display="none";
+document.getElementById("case").style.display="block";
+
+}
+
+
+function showHint(){
+
+document.getElementById("hint").style.display="block";
+
+}
+
+
+function submitAnswer(){
+
+let answer = document.getElementById("answer").value.toLowerCase();
+
+let result = document.getElementById("result");
+
+
+if(answer.trim() === ""){
+
+result.innerHTML="⚠️ Detective, enter your deduction first.";
+
+}
+
+else if(
+answer.includes("college") ||
+answer.includes("classroom") ||
+answer.includes("lab") ||
+answer.includes("cafe") ||
+answer.includes("bench")
+){
+
+result.innerHTML=
+"✅ FINAL COORDINATES RECOVERED!<br><br>"+
+"Case File 006 has been solved.<br><br>"+
+"🔓 Accessing Final Case File...";
+
+
+setTimeout(function(){
+
+window.location.href="day7.html";
+
+},3000);
+
+
+}
+
+else{
+
+result.innerHTML=
+"❌ Incorrect deduction.<br><br>"+
+"The final destination is hidden inside your memories, Detective.";
+
+}
+
+
+}
+
+  </script>
+</body>
+</html>
