@@ -238,3 +238,52 @@ placeholder="Enter the date..."></textarea>
 </div>
 
 </div>
+<script>
+
+function beginCase(){
+
+document.getElementById("briefing").style.display="none";
+document.getElementById("case").style.display="block";
+
+}
+
+function showHint(){
+
+document.getElementById("hint").style.display="block";
+
+}
+
+function submitAnswer(){
+
+let answer=document.getElementById("answer").value.trim().toLowerCase();
+
+if(
+answer==="13 april" ||
+answer==="13th april" ||
+answer==="april 13" ||
+answer==="13/04"
+){
+
+document.getElementById("result").innerHTML=
+"✅ Mission Confirmed!<br><br>Waiting Complete...<br>Decrypting Case File 004...";
+
+setTimeout(function(){
+
+window.location.href="day4.html";
+
+},3000);
+
+}
+else{
+
+document.getElementById("result").innerHTML=
+"❌ Evidence Inconclusive.<br>Review the timeline and investigate again.";
+
+}
+
+}
+
+</script>
+
+</body>
+</html>
