@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Case File 004</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,Helvetica,sans-serif;
+}
+
+body{
+background:#0b0b0b;
+color:white;
+}
+
+.container{
+width:90%;
+max-width:900px;
+margin:40px auto;
+}
+
+.card{
+background:#171717;
+padding:25px;
+border:1px solid gold;
+border-radius:12px;
+margin-bottom:25px;
+}
+
+h1,h2{
+color:gold;
+margin-bottom:15px;
+}
+
+p{
+line-height:1.8;
+margin-bottom:15px;
+}
+
+button{
+padding:12px 25px;
+background:gold;
+color:black;
+border:none;
+border-radius:8px;
+font-weight:bold;
+cursor:pointer;
+margin-top:20px;
+}
+
+textarea{
+width:100%;
+height:160px;
+padding:15px;
+border-radius:10px;
+border:none;
+font-size:16px;
+margin-top:15px;
+resize:none;
+}
+
+#briefing{
+display:block;
+}
+
+#case{
+display:none;
+}
+
+#hint{
+display:none;
+background:#222;
+padding:15px;
+border-left:5px solid gold;
+border-radius:8px;
+margin-top:20px;
+color:#90ee90;
+}
+
+#result{
+margin-top:20px;
+font-weight:bold;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="card" id="briefing">
+
+<h1>🔒 CONFIDENTIAL</h1>
+
+<p><b>Agency:</b> SHIN Investigation Bureau</p>
+
+<p><b>Classification:</b> TOP SECRET</p>
+
+<p><b>Case File:</b> 004</p>
+
+<p><b>Mission Code:</b> OPERATION CLIENT</p>
+
+<p>
+
+Detective...
+
+Every successful operation requires trust.
+
+Real agents rarely use their real names.
+
+Somewhere in our mission,
+
+one special codename was chosen.
+
+Recover that codename.
+
+</p>
+
+<button onclick="beginCase()">
+
+▶ Begin Investigation
+
+</button>
+
+</div>
+
+<div class="card" id="case">
+
+<h1>📁 CASE FILE 004</h1>
+
+<h2>🔍 Evidence 004</h2>
+
+<p>
+
+Mission Activated...
+
+Identity Protected...
+
+Real Name Hidden...
+
+Codename Assigned...
+
+</p>
+
+<h2>🕵 Mission Objective</h2>
+
+<p>
+
+Recover the secret codename that was used during the mission.
+
+</p>
+
+<button onclick="showHint()">
+
+💡 Need a Hint?
+
+</button>
+
+<div id="hint">
+
+Every mission has agents.
+
+Agents don't always use their real names.
+
+Think about the special name we used during our mission.
+
+</div>
+
+<h2 style="margin-top:30px;">
+
+📝 Your Deduction
+
+</h2>
+
+<p>
+
+What was the codename?
+
+</p>
+
+<textarea id="answer"
+placeholder="Enter the codename..."></textarea>
+
+<button onclick="submitAnswer()">
+
+📂 Submit Investigation
+
+</button>
+
+<p id="result"></p>
+
+</div>
+
+  </div>
