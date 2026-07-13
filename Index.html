@@ -1,0 +1,1053 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>OPERATION : THE HIDDEN GIFT</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+
+font-family:'Poppins',sans-serif;
+
+background:
+linear-gradient(135deg,#050505,#111,#1b1328);
+
+min-height:100vh;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+overflow:hidden;
+
+color:white;
+
+}
+
+body::before{
+
+content:"";
+
+position:fixed;
+
+width:200%;
+
+height:200%;
+
+background:
+radial-gradient(circle,rgba(255,215,0,.08) 1px,transparent 1px);
+
+background-size:40px 40px;
+
+animation:move 35s linear infinite;
+
+}
+
+@keyframes move{
+
+from{
+
+transform:translate(0,0);
+
+}
+
+to{
+
+transform:translate(-200px,-200px);
+
+}
+
+}
+
+.container{
+
+width:92%;
+
+max-width:700px;
+
+position:relative;
+
+z-index:5;
+
+}
+
+.card{
+
+background:rgba(15,15,20,.88);
+
+backdrop-filter:blur(12px);
+
+border:1px solid rgba(255,215,0,.35);
+
+border-radius:22px;
+
+padding:40px;
+
+box-shadow:0 0 40px rgba(255,215,0,.18);
+
+text-align:center;
+
+animation:fade .9s ease;
+
+}
+
+@keyframes fade{
+
+from{
+
+opacity:0;
+
+transform:translateY(30px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+.logo{
+
+font-size:65px;
+
+margin-bottom:10px;
+
+}
+
+h1{
+
+font-family:'Cinzel',serif;
+
+font-size:42px;
+
+color:#FFD700;
+
+letter-spacing:4px;
+
+margin-bottom:8px;
+
+}
+
+.subtitle{
+
+font-size:18px;
+
+color:#ddd;
+
+margin-bottom:25px;
+
+}
+
+.classified{
+
+display:inline-block;
+
+padding:8px 20px;
+
+border:2px solid crimson;
+
+color:crimson;
+
+font-weight:bold;
+
+transform:rotate(-5deg);
+
+margin-bottom:25px;
+
+letter-spacing:2px;
+
+}
+
+.message{
+
+line-height:1.9;
+
+font-size:17px;
+
+color:#f5f5f5;
+
+margin-bottom:30px;
+
+}
+
+input{
+
+width:100%;
+
+padding:16px;
+
+background:#1e1e1e;
+
+border:1px solid #444;
+
+border-radius:12px;
+
+color:white;
+
+font-size:16px;
+
+outline:none;
+
+}
+
+input:focus{
+
+border-color:gold;
+
+box-shadow:0 0 12px rgba(255,215,0,.35);
+
+}
+
+button{
+
+width:100%;
+
+margin-top:22px;
+
+padding:16px;
+
+font-size:17px;
+
+font-weight:bold;
+
+border:none;
+
+border-radius:12px;
+
+background:linear-gradient(45deg,#FFD700,#ffef99);
+
+cursor:pointer;
+
+transition:.35s;
+
+}
+
+button:hover{
+
+transform:translateY(-2px);
+
+box-shadow:0 10px 20px rgba(255,215,0,.3);
+
+}
+
+#error{
+
+margin-top:18px;
+
+color:#ff8b8b;
+
+font-weight:bold;
+
+}
+
+  .finalText{
+
+animation:reveal 2s ease;
+
+line-height:1.8;
+
+}
+
+@keyframes reveal{
+
+from{
+
+opacity:0;
+
+transform:translateY(20px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+  }
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="card">
+
+... Login Screen ...
+
+</div>
+
+<!-- 👇 PASTE POINT 3 HERE -->
+
+<div class="card" id="briefing" style="display:none;">
+
+<div class="logo">📂</div>
+
+<h1>MISSION BRIEFING</h1>
+
+<div class="subtitle">
+
+Operation : The Hidden Gift
+
+</div>
+
+<p class="message">
+
+Security Clearance Verified.
+
+Welcome back, Detective Rashu.
+
+This is not an ordinary investigation.
+
+Every case you solve is a memory...
+Every clue is a chapter...
+Every answer brings you one step closer to the truth.
+
+Your final mission is waiting.
+
+Are you ready to begin?
+
+</p>
+
+<button onclick="startMission()">
+
+▶ BEGIN INVESTIGATION
+
+</button>
+
+</div>
+
+</div>
+
+<p class="message">
+
+Welcome, Detective Rashu.
+
+Our agency has spent months investigating a very special case.
+
+Every clue...
+
+Every memory...
+
+Every smile...
+
+has been carefully preserved.
+
+Only one detective has the authorization to uncover the truth.
+
+</p>
+
+<input
+type="password"
+id="password"
+placeholder="Enter Security Password">
+
+<button onclick="login()">
+
+🔓 ACCESS DATABASE
+
+</button>
+  
+</div>
+
+</div>
+  <div class="card" id="case1" style="display:none;">
+
+<div class="logo">📁</div>
+
+<h1>CASE FILE 001</h1>
+
+<div class="subtitle">
+
+THE FIRST CHAPTER
+
+</div>
+
+<div class="classified">
+
+CONFIDENTIAL
+
+</div>
+
+<p class="message">
+
+Every great mystery begins at a place that holds meaning, not value.
+
+Think back to where our story truly began.
+
+Recover the location that started everything.
+
+</p>
+
+<input
+type="text"
+id="answer1"
+placeholder="Enter your answer...">
+
+<button onclick="checkCase1()">
+
+📂 SUBMIT EVIDENCE
+
+</button>
+
+<p id="result1" style="margin-top:20px;font-weight:bold;"></p>
+
+  </div>
+
+  <div class="card" id="case2" style="display:none;">
+
+<div class="logo">💜</div>
+
+<h1>CASE FILE 002</h1>
+
+<div class="subtitle">
+
+THE MESSAGE THAT CHANGED EVERYTHING
+
+</div>
+
+<div class="classified">
+
+TOP SECRET
+
+</div>
+
+<p class="message">
+
+Every investigation has one turning point.
+
+Sometimes...
+
+One message...
+
+One question...
+
+Can change two lives forever.
+
+Recover the exact message that changed everything.
+
+</p>
+
+<input
+type="text"
+id="answer2"
+placeholder="Enter the secret message">
+
+<button onclick="checkCase2()">
+
+📂 SUBMIT EVIDENCE
+
+</button>
+
+<p id="result2" style="margin-top:20px;font-weight:bold;"></p>
+
+  </div>
+
+  <div class="card" id="case3" style="display:none;">
+
+<div class="logo">📅</div>
+
+<h1>CASE FILE 003</h1>
+
+<div class="subtitle">
+
+THE WAITING
+
+</div>
+
+<div class="classified">
+
+CONFIDENTIAL
+
+</div>
+
+<p class="message">
+
+Some answers arrive instantly...
+
+Some require patience.
+
+A question was asked.
+
+A reply was awaited.
+
+Four days held the answer.
+
+Recover the day when the waiting finally ended.
+
+</p>
+
+<input
+type="text"
+id="answer3"
+placeholder="Enter the date">
+
+<button onclick="checkCase3()">
+
+📂 SUBMIT EVIDENCE
+
+</button>
+
+<p id="result3" style="margin-top:20px;font-weight:bold;"></p>
+
+  </div>
+
+  <div class="card" id="case4" style="display:none;">
+
+<div class="logo">🕵️</div>
+
+<h1>CASE FILE 004</h1>
+
+<div class="subtitle">
+
+OPERATION: CLIENT
+
+</div>
+
+<div class="classified">
+
+SECRET CODENAME
+
+</div>
+
+<p class="message">
+
+Every successful operation needs a codename.
+
+A name that hides a story.
+
+A name known only by two people.
+
+Recover the secret codename used during this mission.
+
+</p>
+
+<input
+type="text"
+id="answer4"
+placeholder="Enter the codename">
+
+<button onclick="checkCase4()">
+
+📂 SUBMIT EVIDENCE
+
+</button>
+
+<p id="result4" style="margin-top:20px;font-weight:bold;"></p>
+
+  </div>
+
+  <div class="card" id="case5" style="display:none;">
+
+<div class="logo">💛</div>
+
+<h1>CASE FILE 005</h1>
+
+<div class="subtitle">
+
+THE NAME THAT BECAME HOME
+
+</div>
+
+<div class="classified">
+
+PERSONAL FILE
+
+</div>
+
+<p class="message">
+
+Sometimes one word can carry more meaning than a thousand sentences.
+
+A name can become a memory.
+
+A name can become a feeling.
+
+Recover the special name that became a part of this story.
+
+</p>
+
+<input
+type="text"
+id="answer5"
+placeholder="Enter the special name">
+
+<button onclick="checkCase5()">
+
+📂 SUBMIT EVIDENCE
+
+</button>
+
+<p id="result5" style="margin-top:20px;font-weight:bold;"></p>
+
+  </div>
+
+  <div class="card" id="case6" style="display:none;">
+
+<div class="logo">📍</div>
+
+<h1>CASE FILE 006</h1>
+
+<div class="subtitle">
+
+THE FINAL COORDINATES
+
+</div>
+
+<div class="classified">
+
+FINAL INVESTIGATION
+
+</div>
+
+<p class="message">
+
+Every investigation ends somewhere...
+
+Every journey reaches a final destination.
+
+This clue is different.
+
+It is not about the past.
+
+It is about where the final mission will happen.
+
+Recover the location where the final surprise awaits.
+
+</p>
+
+<input
+type="text"
+id="answer6"
+placeholder="Enter the final location">
+
+<button onclick="checkCase6()">
+
+📂 SUBMIT FINAL EVIDENCE
+
+</button>
+
+<p id="result6" style="margin-top:20px;font-weight:bold;"></p>
+
+  </div>
+
+  <div class="card" id="case7" style="display:none;">
+
+<div class="logo">💛</div>
+
+<h1>CASE FILE 007</h1>
+
+<div class="subtitle">
+
+CASE CLOSED — THE FINAL TRUTH
+
+</div>
+
+<div class="classified">
+
+MOST IMPORTANT EVIDENCE
+
+</div>
+
+<p class="message">
+
+Detective Rashu...
+
+You have followed every clue.
+
+You have opened every file.
+
+You have uncovered every memory.
+
+But the biggest mystery was never hidden inside these cases...
+
+It was the journey that brought us here.
+
+</p>
+
+<p class="message">
+
+Case 001 was the beginning...
+
+A place where two people started talking.
+
+Case 002 was a message...
+
+A moment that changed everything.
+
+Case 003 was waiting...
+
+A reminder that some things are worth being patient for.
+
+Case 004 was a secret name...
+
+A small word that became a special memory.
+
+Case 005 was a feeling...
+
+Something that cannot be explained by words.
+
+Case 006 was the final path...
+
+Leading you to the last chapter.
+
+</p>
+
+<p class="message">
+
+But every great story has one final secret.
+
+The final evidence is not a memory...
+
+It is a surprise waiting for you.
+
+</p>
+
+<p class="message">
+
+🎁 FINAL MISSION:
+
+The gift is not with the person who created this investigation.
+
+It has been safely hidden with someone I trust the most.
+
+Someone who has been chosen to protect the final secret.
+
+Find the keeper of the gift.
+
+Recover the final evidence.
+
+</p>
+
+<button onclick="finalReveal()">
+
+🔓 OPEN FINAL REPORT
+
+</button>
+
+<p id="finalMessage" style="margin-top:25px;font-size:20px;color:gold;"></p>
+
+  </div>
+
+<script>
+
+function login(){
+
+const password=document.getElementById("password").value.trim();
+
+if(password==="Kanna"){
+
+document.querySelector(".card").style.display="none";
+
+document.getElementById("briefing").style.display="block";
+
+}else{
+
+alert("❌ Incorrect Password");
+
+}
+
+}
+
+function startMission(){
+
+document.getElementById("briefing").style.display="none";
+
+document.getElementById("case1").style.display="block";
+
+  }
+
+  function checkCase1(){
+
+let ans=document.getElementById("answer1").value.toLowerCase();
+
+if(
+ans.includes("rdbms")
+||
+ans.includes("lab")
+){
+
+document.getElementById("result1").innerHTML=
+
+"✅ Memory Recovered!<br><br>You found where our journey truly began.<br><br>🔓 CASE FILE 002 UNLOCKED";
+
+setTimeout(function(){
+
+document.getElementById("case1").style.display="none";
+
+document.getElementById("case2").style.display="block";
+
+},2500);
+
+  }
+else{
+
+document.getElementById("result1").innerHTML=
+
+"❌ Incorrect.<br><br>Think about the place where you first started talking.";
+
+}
+
+  }
+
+  function checkCase2(){
+
+let ans=document.getElementById("answer2").value.toLowerCase();
+
+if(ans.includes("hinata"))
+{
+
+document.getElementById("result2").innerHTML=
+
+"💜 Memory Recovered!<br><br>You found the message that changed everything.<br><br>🔓 CASE FILE 003 UNLOCKING...";
+
+setTimeout(function(){
+
+document.getElementById("case2").style.display="none";
+
+document.getElementById("case3").style.display="block";
+
+},2500);
+
+  }
+else{
+
+document.getElementById("result2").innerHTML=
+
+"❌ Incorrect.<br><br>Hint: It was the proposal message.";
+
+}
+
+  }
+
+  function checkCase3(){
+
+let ans=document.getElementById("answer3").value.toLowerCase();
+
+if(
+ans.includes("13") ||
+ans.includes("13 april") ||
+ans.includes("13/04")
+){
+
+document.getElementById("result3").innerHTML=
+
+"💛 Memory Recovered!<br><br>The waiting ended on 13 April.<br><br>🔓 CASE FILE 004 UNLOCKING...";
+
+setTimeout(function(){
+
+document.getElementById("case3").style.display="none";
+
+document.getElementById("case4").style.display="block";
+
+},2500);
+
+  }
+
+else{
+
+document.getElementById("result3").innerHTML=
+
+"❌ Incorrect.<br><br>Remember the day the answer finally arrived.";
+
+}
+
+  }
+
+  function checkCase4(){
+
+let ans=document.getElementById("answer4").value.toLowerCase();
+
+if(
+ans.includes("client")
+){
+
+document.getElementById("result4").innerHTML=
+
+"🕵️ Codename Recovered!<br><br>Operation CLIENT verified.<br><br>🔓 CASE FILE 005 UNLOCKING...";
+
+setTimeout(function(){
+
+document.getElementById("case4").style.display="none";
+
+document.getElementById("case5").style.display="block";
+
+},2500);
+
+  }
+
+else{
+
+document.getElementById("result4").innerHTML=
+
+"❌ Incorrect.<br><br>Every operation has a special name.";
+
+}
+
+  }
+
+  function checkCase5(){
+
+let ans=document.getElementById("answer5").value.toLowerCase();
+
+if(
+ans.includes("kanna")
+){
+
+document.getElementById("result5").innerHTML=
+
+"💛 Memory Recovered!<br><br>You found the name that became home.<br><br>🔓 CASE FILE 006 UNLOCKING...";
+
+setTimeout(function(){
+
+document.getElementById("case5").style.display="none";
+
+document.getElementById("case6").style.display="block";
+
+},2500);
+
+  }
+
+else{
+
+document.getElementById("result5").innerHTML=
+
+"❌ Incorrect.<br><br>Think about the special name she calls you.";
+
+}
+
+  }
+
+  function checkCase6(){
+
+let ans=document.getElementById("answer6").value.toLowerCase();
+
+if(ans.length > 2){
+
+document.getElementById("result6").innerHTML=
+
+"📍 Final Coordinates Recovered...<br><br>The last mystery has been solved.<br><br>🎁 FINAL FILE UNLOCKING...";
+
+setTimeout(function(){
+
+document.getElementById("case6").style.display="none";
+
+document.getElementById("case7").style.display="block";
+
+},3000);
+
+}
+
+else{
+
+document.getElementById("result6").innerHTML=
+
+"❌ Enter the final destination.";
+
+}
+
+  }
+
+  function finalReveal(){
+
+let text = 
+`💌 FINAL REPORT OPENED
+
+Rashu...
+
+Thank you for becoming a part of this story.
+
+Some people enter our lives as strangers...
+and slowly become the memories we never want to lose.
+
+This entire investigation was created for one reason...
+
+To remind you how special this journey has been.
+
+Every clue...
+Every memory...
+Every moment...
+
+was a small chapter of a story that means a lot.
+
+I also have one more piece of evidence to reveal...
+
+I am sorry, Rashu.
+
+I lost the ring you gave me, and I know that ring carried a special memory and meaning.
+
+Even though the ring is gone, the value behind it is not.
+
+The love, the memories, and the moments connected to it will always stay with me.
+
+I hope you can forgive me.
+
+And I want you to know one final truth...
+
+I love you, and I will always treasure the story we are creating together. 💛
+
+🎁 FINAL MISSION:
+
+The gift is not with the person who created this case.
+
+It is safely hidden with someone I trust the most.
+
+Find the keeper of the gift.
+
+Recover the final evidence.
+
+CASE FILE 007: CASE CLOSED 🕵️💛`;
+
+let box = document.getElementById("finalMessage");
+
+box.innerHTML = "";
+
+box.className = "finalText";
+
+let i = 0;
+
+let typing = setInterval(function(){
+
+box.innerHTML += text.charAt(i);
+
+i++;
+
+if(i >= text.length){
+
+clearInterval(typing);
+
+}
+
+},45);
+
+  }
+  
+</script>
+
+</body>
+
+</html>
