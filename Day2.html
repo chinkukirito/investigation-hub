@@ -171,28 +171,31 @@ document.getElementById("hint").style.display="block";
 
 function submitAnswer(){
 
-let answer=document.getElementById("answer").value.toLowerCase();
+let answer = document.getElementById("answer").value.trim().toLowerCase();
 
-if(answer.includes("hinata")){
+if (
+    answer === "will you be my hinata?" ||
+    answer === "will you be my hinata"
+) {
 
-document.getElementById("result").innerHTML=
-"✅ Evidence Confirmed! Case File 002 Solved.";
+    document.getElementById("result").innerHTML =
+    "✅ Evidence Confirmed! You recovered the exact message that changed everything.<br><br>Case File 002 Solved.";
 
-setTimeout(function(){
+    setTimeout(function(){
 
-alert("Case File 003 will be unlocked soon!");
+        window.location.href = "day3.html";
 
-},2000);
+    },3000);
 
 }
 else{
 
-document.getElementById("result").innerHTML=
-"❌ That isn't the recovered message. Investigate again.";
+    document.getElementById("result").innerHTML =
+    "❌ That wasn't the exact message. Search your memories carefully, Detective.";
 
 }
 
-}
+  }
 
 </script>
 
