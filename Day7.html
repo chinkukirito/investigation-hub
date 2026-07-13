@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CASE CLOSED</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,Helvetica,sans-serif;
+}
+
+body{
+background:#050505;
+color:white;
+display:flex;
+justify-content:center;
+align-items:center;
+min-height:100vh;
+overflow:hidden;
+}
+
+.container{
+width:90%;
+max-width:900px;
+text-align:center;
+}
+
+.card{
+background:#171717;
+border:2px solid gold;
+border-radius:15px;
+padding:35px;
+box-shadow:0 0 20px rgba(255,215,0,0.25);
+animation:fadeIn 2s ease;
+}
+
+h1{
+color:gold;
+font-size:42px;
+margin-bottom:15px;
+}
+
+h2{
+color:#ffffff;
+margin-bottom:25px;
+}
+
+p{
+font-size:18px;
+line-height:1.9;
+margin-bottom:18px;
+}
+
+#mission{
+display:none;
+margin-top:35px;
+padding:25px;
+background:#222;
+border-left:6px solid gold;
+border-radius:10px;
+}
+
+button{
+padding:14px 28px;
+font-size:17px;
+font-weight:bold;
+background:gold;
+color:black;
+border:none;
+border-radius:8px;
+cursor:pointer;
+margin-top:20px;
+transition:0.3s;
+}
+
+button:hover{
+transform:scale(1.05);
+}
+
+@keyframes fadeIn{
+from{
+opacity:0;
+transform:translateY(20px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="card">
+
+<h1>🕵️ CASE CLOSED</h1>
+
+<h2>SHIN Investigation Bureau</h2>
+
+<p><b>Investigation Status:</b> ✅ COMPLETE</p>
+
+<p>
+
+Congratulations, Detective Rashu.
+
+</p>
+
+<p>
+
+You solved every case...
+
+Recovered every memory...
+
+Followed every clue...
+
+And completed every mission.
+
+</p>
+
+<p>
+
+What looked like a detective investigation...
+
+Was actually the story of us.
+
+</p>
+
+<p>
+
+Every clue was a memory.
+
+Every answer was a chapter.
+
+Every case brought you one step closer to this moment.
+
+</p>
+
+<button onclick="showMission()">
+
+🎁 Reveal Final Mission
+
+</button>
+
+<div id="mission">
+
+<h2>📌 FINAL MISSION</h2>
+
+<p>
+
+There is only one mission left.
+
+Not on this website...
+
+Not inside another case file...
+
+But in the real world.
+
+</p>
+
+<p style="font-size:28px;color:gold;font-weight:bold;">
+
+Turn Around.
+
+</p>
+
+<p>
+
+Your reward has been waiting for you all along.
+
+❤️🎁
+
+</p>
+
+</div>
+
+</div>
+
+  </div>
+  <script>
+
+function showMission(){
+
+document.getElementById("mission").style.display="block";
+
+window.scrollTo({
+top:document.body.scrollHeight,
+behavior:"smooth"
+});
+
+}
+
+</script>
+
+</body>
+</html>
